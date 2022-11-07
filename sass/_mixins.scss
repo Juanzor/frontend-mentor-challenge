@@ -1,0 +1,65 @@
+@use 'variables' as v;
+
+@mixin modal-background {
+    background-color: v.$Black-modal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+@mixin image-btn($top, $left, $showDesktop) {
+    background-color: v.$White;
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: $top;
+    left: $left;
+
+    @media (min-width: 1115px) {
+        @if ($showDesktop == true) {
+            display: block;
+        } @else {
+            display: none;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin changeNumber($pv, $ph) {
+    width: 25px;
+    height: 100%;
+    padding: $pv $ph;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    background-color: v.$Orange;
+    color: v.$White;
+    font-size: 0.9em;
+    font-weight: 700;
+    border: none;
+    height: 57px;
+    border-radius: 8px;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+}
