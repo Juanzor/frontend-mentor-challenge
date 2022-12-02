@@ -1,3 +1,3 @@
 # frontend-mentor-challenge
 
-Railway: https://frontend-mentor-challenge-production.up.railway.app/
+Railway: https://busy-wren-production.up.railway.app/
